@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Echo of Movement</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Irish+Grover&family=Roboto+Mono&display=swap" rel="stylesheet" />
 
@@ -581,41 +581,124 @@
     color: white;
   }
 
+/*  태블릿 이하 (1024px 이하) */
+@media (max-width: 1024px) {
+  .section-show, .section-hype {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+  }
 
-    /* 모바일 대응 */
-    @media (max-width: 768px) {
-      .header {
-        padding: 12px 16px;
-      }
+  .label {
+    left: 5%;
+    width: 90%;
+  }
 
-      .logo {
-        font-size: 24px;
-      }
+  .label .WE-DON-t-JUST-MOVE {
+    font-size: 96px;
+    line-height: 1.2;
+  }
 
-      .navbar {
-        min-width: unset;
-      }
+  .navbar {
+    min-width: unset;
+  }
 
-      .navbar a {
-        font-size: 12px;
-        padding: 4px 8px;
-      }
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
 
-      .subtitle {
-        font-size: 9px;
-      }
+  .cast-title, .headline, .link-content .title {
+    font-size: 64px;
+  }
 
-      .label {
-        top: 36%;
-        left: 24px;
-        width: auto;
-      }
+  .cast-desc, .desc, .show-description, .link-content .desc {
+    font-size: 20px;
+  }
 
-      .label .WE-DON-t-JUST-MOVE {
-        font-size: 72px;
-        line-height: 1.1;
-      }
-    }
+  .hype-image, .show-image {
+    width: 80%;
+    height: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .link-content {
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .link-background {
+    top: -150px;
+    width: 90%;
+  }
+}
+
+/* 모바일 대응 (768px 이하) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-show .show-title,
+  .headline,
+  .cast-title,
+  .link-content .title {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .label .WE-DON-t-JUST-MOVE {
+    font-size: 64px;
+    text-align: center;
+  }
+
+  .label {
+    top: 10%;
+    left: 5%;
+  }
+
+  .section-show,
+  .section-hype {
+    padding: 60px 16px;
+  }
+
+  .cast-desc,
+  .desc,
+  .show-description {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .show-button {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+
+    
+  
   </style>
 </head>
 
