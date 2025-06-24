@@ -30,13 +30,24 @@
         alert("기능 구현 중입니다.");
       });
     });
-    
+    // 네비게이션 클릭 시 최상단 이동
+    document.body.addEventListener("click", function (e) {
+      if (e.target.closest("nav a")) return; // 네비게이션 버튼 제외
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
   
   });
 </script>
 
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -738,10 +749,10 @@
     <div class="logo">Echo of Movement</div>
     <nav class="navbar">
       <ul>
-        <li><a href="#">Show<span class="subtitle">당신을 보여주세요</span></a></li>
-        <li><a href="#">Cast<span class="subtitle">공연 기회를 만나세요</span></a></li>
-        <li><a href="#">Hype<span class="subtitle">움직임에 열광을 더하세요</span></a></li>
-        <li><a href="#">Link<span class="subtitle">세상과 연결되세요</span></a></li>
+        <li><a href="#show">Show<span class="subtitle">당신을 보여주세요</span></a></li>
+        <li><a href="#cast">Cast<span class="subtitle">공연 기회를 만나세요</span></a></li>
+        <li><a href="#hype">Hype<span class="subtitle">움직임에 열광을 더하세요</span></a></li>
+        <li><a href="#link">Link<span class="subtitle">세상과 연결되세요</span></a></li>
         <li><a href="login.html">Login<span class="subtitle">가입해보세요</span></a></li>
       </ul>
     </nav>
@@ -762,7 +773,7 @@
 
   <div class="hero-rectangle"></div>
 
-  <section class="section-show">
+  <section id="show" class="section-show">
     <div class="show-image">
       <img src="./img/show.png" alt="Show Profile Image" />
     </div>
@@ -776,7 +787,7 @@
     </div>
   </section>
 
-  <section class="section-cast">
+  <section id="cast" class="section-cast">
 
   <div class="cast-carousel-wrapper">
     <div class="cast-track">
@@ -798,7 +809,7 @@
     <div class="show-button">CAST</div>
   </section>
 
-  <section class="section-hype">
+  <section id="hype" class="section-hype">
 
     <div class="hype-text">
       <div class="headline">
@@ -819,7 +830,7 @@
     </div>
   </section>
 
-  <section class="section-link">
+  <section id="link" class="section-link">
 
   <div class="link-background">
     <img src="./img/link.png" alt="Link Background Image" />
