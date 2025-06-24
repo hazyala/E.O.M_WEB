@@ -36,7 +36,7 @@
 
 ## 🔧 사용 기술
 
-- HTML5 / CSS3 기반 정적 웹사이트
+- HTML5 / CSS3 / JavaScript 기반 웹사이트
 - 반응형 레이아웃 적용 (모바일, 태블릿, 데스크탑 대응)
 - 고정 배경 이미지 및 통일된 UI/UX 스타일
 - Google Fonts 활용: Irish Grover, Pacifico, Inter
