@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Echo of Movement</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Irish+Grover&family=Roboto+Mono&display=swap" rel="stylesheet" />
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // 타자기 효과
+    const element = document.querySelector(".WE-DON-t-JUST-MOVE");
+    const text = element.textContent;
+    element.textContent = "";
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+
+    typeWriter();
+
+    // alert 창
+    const buttons = document.querySelectorAll(".show-button");
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        alert("기능 구현 중입니다.");
+      });
+    });
+    
+  
+  });
+</script>
+
 
   <style>
     body {
@@ -682,10 +712,23 @@
     .footer-slogan {
       font-size: 14px;
     }
-  }
+
+    #welcome-message {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Irish Grover', cursive;
+    font-size: 48px;
+    opacity: 1;
+    transition: opacity 2s ease;
+    z-index: 9999;
+    pointer-events: none;
+}
 
 
-    
+}   
   
   </style>
 </head>
@@ -699,7 +742,7 @@
         <li><a href="#">Cast<span class="subtitle">공연 기회를 만나세요</span></a></li>
         <li><a href="#">Hype<span class="subtitle">움직임에 열광을 더하세요</span></a></li>
         <li><a href="#">Link<span class="subtitle">세상과 연결되세요</span></a></li>
-        <li><a href="#">Login<span class="subtitle">가입해보세요</span></a></li>
+        <li><a href="login.html">Login<span class="subtitle">가입해보세요</span></a></li>
       </ul>
     </nav>
   </header>
@@ -840,7 +883,6 @@
     </div>
   </div>
 </footer>
-
 
 </body>
 </html>
