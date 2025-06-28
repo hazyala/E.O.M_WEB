@@ -30,14 +30,12 @@
         alert("기능 구현 중입니다.");
       });
     });
-    // 네비게이션 클릭 시 최상단 이동
-    document.body.addEventListener("click", function (e) {
-      if (e.target.closest("nav a")) return; // 네비게이션 버튼 제외
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+   
+   //로고 클릭시 최상단 이동
+    document.querySelector(".logo").addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
   
   });
 </script>
